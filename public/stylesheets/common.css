@@ -1,0 +1,13 @@
+body {
+    background: #000;
+    color: #FFF;
+}
+
+#punchdiv {
+    margin: 10% auto;
+}
+
+#punchdiv span {
+    display: block;
+    text-align: center;
+}
