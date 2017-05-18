@@ -1,8 +1,30 @@
 <% include partials/header %>
 
     <div id="punchdiv">
-        <span><i class="large material-icons">dashboard</i></span>
-        <span>E-Ticketing NEXT</span>
+        <span class="logo"><i class="large material-icons">dashboard</i></span>
+        <span class="punchline">E-Ticketing Next</span>
+        <form action="/signin" method="POST">
+            <div id="logindiv" class="card grey white">
+                <div class="card-content black-text" >
+                    <span class="card-title">Sign In</span>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate">
+                            <label for="username" class="black-text">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password"  class="black-text">Password</label>
+                        </div>
+                    </div> 
+                    <button id="submitbtn" class="btn waves-effect waves-light right" type="submit" name="action">
+                        Sign In<i class="material-icons right">send</i>
+                    </button>                                
+                </div>  
+            </div>
+        </form>
     </div>    
 
 <% include partials/footer %>
