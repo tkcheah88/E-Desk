@@ -2,41 +2,39 @@ body {
     background: #B3DE81;
 }
 
-#punchdiv {
-    color: #000B29;
-    background: #68A225;
-    margin: 5% auto;
-    padding-bottom: 20px;
+#logo {
+    background: #265C00;
+    color:#FFF;
     text-align: center;
-    user-select: none;
-    width: 500px;
-}
-
-#punchdiv .logo {
-    display: block;
-}
-
-#punchdiv .punchline {
-    font-family: 'Righteous', cursive;
-    font-size: 2.0em;
+    font-size: 2em;
+    width:10em;    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 1px 1px #000;
 }
 
 #logindiv {
-    margin: 20px auto;
+    margin: 100px auto;
     width: 400px;
     background: #265C00;
+    box-shadow: 3px 3px 10px #000;
 }
 
 #logindiv {
-    padding-bottom: 30px;
     color: #FFF;
 }
 
 #submitbtn {
-    display:block;
+    font-weight: bold;
 }
 
 .card .card-title {
     font-weight: bold;
     font-size: 1.7em;
+    
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 1px #000;
 }
