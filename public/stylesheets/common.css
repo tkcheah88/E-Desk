@@ -2,14 +2,15 @@ body {
     background: #B3DE81;
 }
 
-#logo {
+#topdiv {
     background: #265C00;
     color:#FFF;
-    text-align: center;
-    font-size: 2em;
-    width:10em;    
+    font-size: 2em;   
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    width: 10em;
     border-bottom-right-radius: 20px;
     box-shadow: 1px 1px 1px #000;
 }

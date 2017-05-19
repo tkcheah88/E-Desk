@@ -1,12 +1,12 @@
 <% include partials/header %>
 
-    <div id="logo" class="text-shadow box-shadow">
-        <i class="fa fa-ticket" aria-hidden="true"></i> <span>E-Ticketing Next</span>
+    <div id="topdiv" class="text-shadow box-shadow">
+        <i class="fa fa-ticket"> E-Ticketing Next</i>
     </div>
-    <form action="/login" method="POST">
-        <div id="logindiv" class="card box-shadow">
-            <div class="card-content text-shadow">
-                <span class="card-title text-shadow">Sign In</span>
+    <div id="logindiv" class="card box-shadow">
+        <div class="card-content text-shadow">
+            <span class="card-title text-shadow">Sign In</span>
+            <form action="/login" method="POST">
                 <div class="row">
                     <div class="input-field col s12">
                     <input id="username" name="username" type="text" class="validate" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
@@ -20,9 +20,8 @@
                 </div>        
                 <button id="submitbtn" class="btn waves-effect waves-red right yellow black-text" type="submit" name="action">
                     Sign In<i class="material-icons right">send</i>
-                </button>                                
-            </div>
+                </button>     
+            </form>                                    
         </div>
-    </form>
-
+    </div>
 <% include partials/footer %>
