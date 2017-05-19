@@ -3,23 +3,23 @@
     <div id="punchdiv">
         <span class="logo"><i class="large material-icons">dashboard</i></span>
         <span class="punchline">E-Ticketing Next</span>
-        <form action="/signin" method="POST">
-            <div id="logindiv" class="card grey white">
-                <div class="card-content black-text" >
+        <form action="/login" method="POST">
+            <div id="logindiv" class="card">
+                <div class="card-content">
                     <span class="card-title">Sign In</span>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="username" type="text" class="validate">
-                            <label for="username" class="black-text">Username</label>
+                            <input id="username" name="username" type="text" class="validate" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
+                            <label for="username" class="white-text">Username</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
-                            <label for="password"  class="black-text">Password</label>
+                            <input id="password" name="password" type="password" class="validate" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+                            <label for="password"  class="white-text">Password</label>
                         </div>
-                    </div> 
-                    <button id="submitbtn" class="btn waves-effect waves-light right" type="submit" name="action">
+                    </div>        
+                    <button id="submitbtn" class="btn waves-effect waves-red right yellow black-text" type="submit" name="action">
                         Sign In<i class="material-icons right">send</i>
                     </button>                                
                 </div>  
