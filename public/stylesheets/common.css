@@ -19,11 +19,12 @@ body {
     margin: 100px auto;
     width: 400px;
     background: #265C00;
+    color: #FFF;
     box-shadow: 3px 3px 10px #000;
 }
 
-#logindiv {
-    color: #FFF;
+#logindiv .card-content {
+    padding-bottom: 20px;
 }
 
 #submitbtn {
@@ -38,4 +39,17 @@ body {
 
 .text-shadow {
     text-shadow: 2px 2px 1px #000;
+}
+
+#signupdiv {
+    text-align: left;
+}
+
+#signupdiv a {
+    color:yellow;
+    display: block;
+}
+
+#signupdiv a:first-of-type {
+    padding-bottom: 5px;
 }
