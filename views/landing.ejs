@@ -1,34 +1,24 @@
 <% include partials/header %>
 
-    <div id="topdiv" class="text-shadow box-shadow">
+    <div id="topdiv" class="text-shadow">
         <i class="fa fa-ticket"> E-Ticketing Next</i>
     </div>
-
-
-    <div id="logindiv" class="card box-shadow">
-        <div class="card-content text-shadow">
-            <span class="card-title text-shadow">Sign In</span>
-            <form action="/login" method="POST">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="username" name="username" type="text" class="validate" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
-                        <label for="username" class="white-text">Username</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" name="password" type="password" class="validate" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
-                        <label for="password"  class="white-text">Password</label>
-                    </div>
-                </div>        
-                <button id="submitbtn" class="btn waves-effect waves-red right yellow black-text" type="submit" name="action">
-                    Sign In&nbsp&nbsp<i class="fa fa-sign-in"></i>
-                </button>     
-            </form>
-            <div id="signupdiv">
-                <a>Reset Password</a>
-                <a>Sign Up</a>
-            </div>                                     
-        </div>
+    <div id="logindiv" class="box-shadow">
+        <form action="/login" method="POST">
+            <div id="login_title">
+                <span class="text-shadow">Sign In</span>
+            </div> 
+            <div class="ui input">
+                <input id="username" name="username" type="text" placeholder="username" class="" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
+            </div>     
+            <div class="ui input">
+                <input id="password" name="password" type="password" placeholder="password" class="" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+            </div>      
+            <button id="submitbtn" class="ui button">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></button>   
+        </form>   
+    </div> 
+    <div id="bottomdiv" class="text-shadow">
+        <a id="reglink" href="#"><i class="fa fa-user-plus" aria-hidden="true"> Sign Up Now</a></i>
     </div>
+    
 <% include partials/footer %>
