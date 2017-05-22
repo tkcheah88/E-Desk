@@ -1,24 +1,61 @@
 <% include partials/header %>
-
-    <div id="topdiv" class="text-shadow">
-        <i class="fa fa-ticket"> E-Ticketing Next</i>
+    <div id="signupsidebar" class="ui right sidebar vertical menu">
+        <a class="item">
+            <form action="/register" method="POST">
+                <div id="loginTitle">
+                    Sign Up
+                </div>
+                <div class="ui corner labeled input full-width">
+                    <input id="su_username" name="username" type="text" placeholder="username" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
+                    <div class="ui corner label">
+                        <i class="asterisk icon mandatory"></i>
+                    </div>
+                </div>
+                <div class="ui corner labeled input full-width">
+                    <input id="su_password" name="password" type="password" placeholder="password" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+                    <div class="ui corner label">
+                        <i class="asterisk icon mandatory"></i>
+                    </div>
+                </div>
+                <div class="ui corner labeled input full-width">
+                    <input id="su_confirmpassword" name="confirmpassword" type="password" placeholder="Re-enter password" onkeyup="checkPassword()" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+                    <div class="ui corner label">
+                        <i class="asterisk icon mandatory"></i>
+                    </div>
+                </div>
+                <div class="ui corner labeled input full-width">
+                    <input id="email" name="email" type="email" placeholder="email" required>                   
+                    <div class="ui corner label">
+                        <i class="asterisk icon mandatory"></i>
+                    </div>
+                </div>
+                <div id="registerbtn" class="ui buttons full-width">
+                    <button class="ui secondary button">Register Now</button>
+                </div>
+            </form>
+        </a>
     </div>
-    <div id="logindiv" class="box-shadow">
-        <form action="/login" method="POST">
-            <div id="login_title">
-                <span class="text-shadow">Sign In</span>
-            </div> 
-            <div class="ui input">
-                <input id="username" name="username" type="text" placeholder="username" class="" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
-            </div>     
-            <div class="ui input">
-                <input id="password" name="password" type="password" placeholder="password" class="" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
-            </div>      
-            <button id="submitbtn" class="ui button">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></button>   
-        </form>   
-    </div> 
-    <div id="bottomdiv" class="text-shadow">
-        <a id="reglink" href="#"><i class="fa fa-user-plus" aria-hidden="true"> Sign Up Now</a></i>
+    <div class="pusher">
+        <div id="topdiv" class="text-shadow unselectable">
+            <i class="fa fa-ticket"> E-Ticketing Next</i>
+        </div>
+        <div id="logindiv" class="box-shadow">
+            <form action="/login" method="POST">
+                <div id="login_title">
+                    <span class="text-shadow unselectable">Sign In</span>
+                </div> 
+                <div class="ui input">
+                    <input id="username" name="username" type="text" placeholder="username" class="" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
+                </div>     
+                <div class="ui input">
+                    <input id="password" name="password" type="password" placeholder="password" class="" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+                </div>      
+                <button id="submitbtn" class="ui button">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></button>   
+            </form>   
+        </div> 
+        <div id="signupdiv" class="text-shadow button-transition">
+            <a id="reglink" onclick="toggleSignUpSidebar()" href="#"><i class="fa fa-user-plus" aria-hidden="true"></a></i>
+        </div>
     </div>
-    
+            
 <% include partials/footer %>
