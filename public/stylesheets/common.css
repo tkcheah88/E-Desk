@@ -1,30 +1,32 @@
-body {
-    background: #B3DE81;
-}
+/*body {
+    background: #011A27;
+}*/
 
 body.pushable > .pusher {
-    background: #B3DE81;
+    background: #D1913C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #topdiv {
-    background: #265C00;
+    background: #063852;
     color:#FFF;
     font-size: 2em;   
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 20px;
-    width: 10em;
+    width: 6.5em;
     border-bottom-right-radius: 20px;
-    box-shadow: 1px 1px 1px #000;
+    box-shadow: 1px 1px 10px #FFF;
 }
 
 #logindiv {
-    margin: 100px auto;
+    margin: 10% auto;
     width: 500px;
-    background: #265C00;
+    background: #063852;
     color: #FFF;
-    box-shadow: 3px 3px 10px #000;
+    box-shadow: 0 0 5px #FFF;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
 }
@@ -59,7 +61,7 @@ body.pushable > .pusher {
     font-size: 1.5em;
     width: 92%;
     font-weight: bold;
-    height: 50px;
+    height: 55px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
@@ -83,7 +85,7 @@ body.pushable > .pusher {
     position: fixed;
     top: 0;
     right: 0;
-    background: #265C00;
+    background: #063852;
     color: #FFF;
     font-size: 2em;
     text-align: right;
@@ -92,15 +94,19 @@ body.pushable > .pusher {
     padding-left: 10px;
     padding-right: 20px;
     width: 1.8em;
+    height: 1.5em;
     overflow: hidden;
     border-bottom-left-radius: 20px;
-    box-shadow: 1px 1px 1px #000;
+    box-shadow: 0 0 10px #FFF;
+    transition: all 0.2s ease-in; 
 }
 
-#signupdiv:hover {
-    /*width:6em;*/
-    background: #CB0000;
-    box-shadow: -3px 3px 10px #000;
+#signupdiv:hover {   
+    box-shadow: 0 0 15px #FFF;
+    background: #F62A00;  
+    font-size: 3em;
+    width: 1.5em;
+    height: 1.3em;
 }
 
 #loginTitle {

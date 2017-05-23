@@ -7,10 +7,13 @@ const LocalStrategy     = require("passport-local");
 const methodOverride    = require("method-override");
 const User              = require("./models/user");
 const port              = process.env.PORT || 3000;
+const mongoConnection   = process.env.MONGO_CONNECT_STRING || "mongodb://localhost/itg_next";
+const secretKey         = process.env.SECRETKEY;
 
 const indexRoutes       = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/itg_next");
+
+mongoose.connect(mongoConnection);
 app.use(bodyParder.urlencoded({extended:true}));
 app.use(express.static(`${__dirname}/public`));
 app.set("view engine", "ejs");
@@ -31,5 +34,5 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/", indexRoutes);
 
 app.listen(port, () => {
-    console.log(`ITG_Next started at port ${port}`);
+    console.log(`E-Desk started at port ${port}`);
 });
