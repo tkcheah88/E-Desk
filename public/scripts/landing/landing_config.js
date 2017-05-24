@@ -14,5 +14,16 @@ $('.message .close')
       .closest('.message')
       .transition('fade')
     ;
-  })
-;
+  });
+
+//dismiss #notificationdiv after 7 seconds
+window.setTimeout(() => {
+    $("#notificationdiv").fadeTo(7000,0).slideUp(500, () => {
+        $(this).remove();
+    });
+});
+
+//animate logindiv on load
+window.onload = () => {
+    $('#logindiv').transition('scale');
+}; 
