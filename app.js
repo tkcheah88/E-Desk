@@ -1,5 +1,6 @@
 const express           = require("express");
 const app               = express();
+const helmet            = require("helmet");
 const bodyParder        = require("body-parser");
 const mongoose          = require("mongoose");
 const passport          = require("passport");
@@ -14,6 +15,7 @@ const mongoConnection   = process.env.MONGO_CONNECT_STRING || "mongodb://localho
 const secretKey         = process.env.SECRETKEY || "somerandomsecretkey";
 
 mongoose.connect(mongoConnection);
+app.use(helmet());
 app.use(bodyParder.urlencoded({extended:true}));
 app.use(express.static(`${__dirname}/public`));
 app.set("view engine", "ejs");
