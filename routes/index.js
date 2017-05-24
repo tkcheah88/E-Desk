@@ -17,15 +17,25 @@ router.get("/home", middleware.isLoggedIn, (req,res) => {
 });
 
 router.post("/register", (req,res) => {
-    var newUser = new User({username:req.body.username, email:req.body.email});
-    User.register(newUser, req.body.password, (err, user) => {
+    var email = req.body.email;
+    User.findOne({email:email}, (err, found) => {
         if(err){
-            console.log(err.message);
             req.flash("error", err.message);
             return res.redirect("/");
         }
-        passport.authenticate("local")(req, res, () => {
-            res.redirect("/home");
+        if(found){
+            req.flash("error", "That email you entered is already associated with an existing account");
+            return res.redirect("/");
+        }
+        var newUser = new User({username:req.body.username, email:email});
+        User.register(newUser, req.body.password, (err, user) => {
+            if(err){
+                req.flash("error", err.message);
+                return res.redirect("/");
+            }
+            passport.authenticate("local")(req, res, () => {
+                res.redirect("/home");
+            });
         });
     });
 });
