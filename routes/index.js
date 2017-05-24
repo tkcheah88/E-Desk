@@ -21,6 +21,7 @@ router.post("/register", (req,res) => {
     User.register(newUser, req.body.password, (err, user) => {
         if(err){
             console.log(err.message);
+            req.flash("error", err.message);
             return res.redirect("/");
         }
         passport.authenticate("local")(req, res, () => {
@@ -31,7 +32,8 @@ router.post("/register", (req,res) => {
 
 router.post("/login", passport.authenticate("local", {
     successRedirect: "/home",
-    failureRedirect: "/"
+    failureRedirect: "/",
+    failureFlash: "Invalid username or password, kindly try again."
 }), (req, res) => {
     //this callback is not doing anything
 });

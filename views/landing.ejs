@@ -39,16 +39,28 @@
         <div id="topdiv" class="text-shadow unselectable">
             <i class="fa fa-ticket"> EZ DESK</i>
         </div>
+        <div id="notificationdiv">
+            <% if(error && error.length > 0) { %>
+                <div class="ui negative message">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        ERROR
+                    </div>
+                    <p><%= error %></p>
+                </div>
+            <% } %> 
+        </div>
         <div id="logindiv" class="box-shadow">
+                    
             <form action="/login" method="POST">
                 <div id="login_title">
                     <span class="text-shadow unselectable">Sign In</span>
                 </div> 
                 <div class="ui input">
-                    <input id="username" name="username" type="text" placeholder="username" class="" pattern="^\S{6,}$" title="Username must be at 6 characters" required>
+                    <input id="username" name="username" type="text" placeholder="username" required>
                 </div>     
                 <div class="ui input">
-                    <input id="password" name="password" type="password" placeholder="password" class="" pattern="^\S{8,}$" title="Password must be at least 8 characters" required>
+                    <input id="password" name="password" type="password" placeholder="password" required>
                 </div>      
                 <button id="submitbtn" class="ui button">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></button>   
             </form>   
@@ -56,6 +68,5 @@
         <div id="signupdiv" class="text-shadow button-transition">
             <a id="reglink" onclick="toggleSignUpSidebar()" href="#"><i class="fa fa-user-plus" aria-hidden="true"></a></i>
         </div>
-    </div>
-            
+    </div>    
 <% include partials/footer %>
