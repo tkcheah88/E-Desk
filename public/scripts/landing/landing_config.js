@@ -25,5 +25,5 @@ window.setTimeout(() => {
 
 //animate logindiv on load
 window.onload = () => {
-    $('#logindiv').transition('scale');
+    $('#logindiv').transition('pulse');
 }; 

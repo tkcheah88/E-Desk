@@ -1,7 +1,3 @@
-/*body {
-    background: #011A27;
-}*/
-
 body.pushable > .pusher {
     background: #D1913C;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
@@ -105,8 +101,8 @@ body.pushable > .pusher {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 20px;
-    width: 1.8em;
-    height: 1.5em;
+    width: 4.5em;
+    height: 1.2em;
     overflow: hidden;
     border-bottom-left-radius: 20px;
     box-shadow: 0 0 10px #FFF;
@@ -116,42 +112,32 @@ body.pushable > .pusher {
 #signupdiv:hover {   
     box-shadow: 0 0 15px #FFF;
     background: #F62A00;  
-    font-size: 3em;
+    /*font-size: 3em;
     width: 1.5em;
-    height: 1.3em;
+    height: 1.3em;*/
 }
 
 #loginTitle {
+    color: #FFF;
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/*
-#signupdiv:hover {
-    width:6em;
-    background: #CB0000;
-    box-shadow: -3px 3px 10px #000;
-}
-
-#signupdiv:hover #su-text {
-    display: inline;
-}
-
-#su-text {
-    display: none;
-}
-
-#su-text:hover {
-    display: block;
-}
-*/
 #reglink {
     color: #FFF;
 }
 
+#signupsidebar {
+    background: #000;
+}
+
 #signupsidebar .item .input {
     margin: 5px 0 5px 0;
+}
+
+#registerbtndiv {
+    margin-top: 5px;
 }
 
 .mandatory {

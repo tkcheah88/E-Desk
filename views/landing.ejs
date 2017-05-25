@@ -29,8 +29,12 @@
                         <i class="asterisk icon mandatory"></i>
                     </div>
                 </div>
-                <div id="registerbtn" class="ui buttons full-width">
-                    <button class="ui secondary button">Register Now</button>
+                <div id="registerbtndiv" class="ui buttons full-width">
+                    <button id="registerbtn" class="ui green button">
+                        <span class="text-shadow">Register Now&nbsp&nbsp&nbsp
+                            <i class="sign in icon"></i>
+                        </span>
+                    </button>
                 </div>
             </form>
         </a>
@@ -65,7 +69,7 @@
             </form>   
         </div> 
         <div id="signupdiv" class="text-shadow button-transition">
-            <a id="reglink" onclick="toggleSignUpSidebar()" href="#"><i class="fa fa-user-plus" aria-hidden="true"></a></i>
+            <a id="reglink" onclick="toggleSignUpSidebar()" href="#">Sign Up</a>
         </div>
     </div>    
 <% include partials/footer %>
