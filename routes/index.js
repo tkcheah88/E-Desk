@@ -7,7 +7,7 @@ const middleware    = require("../middleware/index");
 router.get("/", (req,res) => {
     //prevents logged-in users from redirecting to the landing via url manipulation
     if(req.user){
-        res.redirect("/home");
+        return res.redirect("/home");
     }
     res.render("landing");
 });
