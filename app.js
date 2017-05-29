@@ -10,6 +10,7 @@ const methodOverride    = require("method-override");
 const expressSession    = require("express-session");
 const User              = require("./models/user");
 const indexRoutes       = require("./routes/index");
+const homeRoutes        = require("./routes/home");
 const port              = process.env.PORT || 3000;
 const mongoConnection   = process.env.MONGO_CONNECT_STRING || "mongodb://localhost/itg_next";
 const secretKey         = process.env.SECRETKEY || "somerandomsecretkey";
@@ -44,6 +45,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/", indexRoutes);
+app.use("/home", homeRoutes);
 
 app.listen(port, () => {
     console.log(`E-Desk started at port ${port}`);

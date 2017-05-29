@@ -53,8 +53,4 @@ router.get("/logout", (req,res) => {
     res.redirect("/");
 });
 
-router.get("/profile", middleware.isLoggedIn, (req,res) => {
-    res.render("profile/userProfile");
-});
-
 module.exports = router;
